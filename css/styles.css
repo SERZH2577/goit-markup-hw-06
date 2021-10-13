@@ -477,7 +477,7 @@ border-bottom: 1px solid var(--secondary-background-color);
 	fill: var(--accent-color);
 }
 
-/* -------- Footer -------- */
+/* ==================== Footer */
 
 .footer {
 	padding-bottom: 60px;
@@ -527,6 +527,8 @@ margin-bottom: 9px;
 	margin-right: 70px;
 }
 
+/* Footer Join */
+
 .footer-title-join {
 	font-weight: 700;
 	font-size: 14px;
@@ -567,7 +569,101 @@ margin-bottom: 9px;
 	fill: var(--secondary-text-color);
 }
 
-/* -------- Portfolio -------- */
+/* Footer Form */
+
+.footer-subscription {
+	margin-left: 93px;
+}
+
+.footer-subscription-title {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+	color: var(--secondary-text-color);
+
+	display: inline-block;
+	margin-bottom: 20px;
+
+}
+
+.footer-subscription-form {
+	display: flex;
+}
+
+.footer-form-input {
+
+	width: 358px;
+	height: 50px;
+
+	background: var(--third-background-color);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+
+	color: var(--secondary-text-color);
+
+	padding: 15px 16px;
+
+	outline: none;
+
+	transition: border 250ms var(--main-timing);
+}
+
+.footer-form-input:hover, 
+.footer-form-input:focus {
+	border: 1px solid var(--accent-color);
+}
+
+.footer-form-input::placeholder {
+	font-size: 16px;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subscription-btn {
+	position: relative;
+
+	width: 200px;
+	height: 50px;
+
+	background: #2196F3;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.87;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--secondary-text-color);
+
+	padding: 10px 29px;
+	margin-left: 12px;
+}
+
+.subscription-btn-icon {
+	position: absolute;
+	top: 50%;
+	left: 148px;
+	transform: translateY(-50%);
+
+
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+
+	fill: var(--secondary-text-color);
+}
+
+/* ==================== Portfolio */
 
 .portfolio {
 	padding-top: 94px;
@@ -720,7 +816,7 @@ margin-bottom: 9px;
 	transition-timing-function: var(--main-timing);
 }
 
-/* -------- Modal Window -------- */
+/* ==================== Modal Window */
 
 .backdrop {
 	position: fixed;
@@ -759,9 +855,13 @@ margin-bottom: 9px;
 
 	transform: scale(1) translate(-50%, -50%);
 	transition: transform 250ms var(--main-timing);
+
+	padding: 40px;
+
+	text-align: center;
 }
 
-.modal-btn {
+.modal-btn-close {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -783,7 +883,205 @@ margin-bottom: 9px;
 	width: 11px;
 	height: 11px;
 	fill: #000000;
+
+	transition: fill 250ms var(--main-timing);
+}
+
+.modal-btn-close:hover .modal-btn-icon, 
+.modal-btn-close:focus .modal-btn-icon {
+	fill: var(--accent-color);
+}
+
+.modal-title {
+	display: inline-block;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: calc(23 / 20);
+	color: var(--primary-title-color);
+
+	margin-bottom: 12px;
+}
+
+.modal-form {
+	
+}
+
+.modal-form-field {
+		margin-bottom: 10px;
+}
+
+.modal-label {
+	display: flex;
+
+	margin-bottom: 4px;
+
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--primary-text-color);
+}
+
+.form-field {
+	position: relative;
+}
+
+.modal-input {
+	width: 100%;
+	height: 40px;
+	padding: 12px 12px 12px 40px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	transition: border 250ms var(--main-timing);
+}
+
+.modal-input:hover, 
+.modal-input:focus {
+	border: 1px solid var(--accent-color);
+	outline: none;
+}
+
+.form-name-icon {
+	position: absolute;
+
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+
+	width: 18px;
+	height: 18px;
+	fill: #212121;
+
+	pointer-events: none;
+
+	transition: fill 250ms var(--main-timing);
+}
+
+.modal-input:hover ~ .form-name-icon, 
+.modal-input:focus ~ .form-name-icon {
+	fill: var(--accent-color);
+}
+
+.modal-form-comment {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.modal-label-comment {
+	display: flex;
+
+	margin-bottom: 4px;
+
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--primary-text-color);
+}
+
+.modal-textarea-comment {
+	width: 100%;
+
+	padding: 12px 16px;
+	resize: none;
+
+	background-color: var(--primary-background-color);
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	box-sizing: border-box;
+	border-radius: 4px;
+
+	color: var(--primary-title-color);
+
+	transition: border 250ms var(--main-timing);
+}
+
+.modal-textarea-comment:hover, 
+.modal-textarea-comment:focus {
+	border: 1px solid var(--accent-color);
+	outline: none;	
+}
+
+.modal-textarea-comment::placeholder {
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.01em;
+	color: rgba(117, 117, 117, 0.5);
+}
+
+/* Modal Checkbox */
+
+.modal-checkbox {
+	margin-bottom: 30px;
+	
+	font-size: 14px;
+	line-height: 1.71;
+	color: var(--primary-text-color);
+}
+
+.modal-checkbox-label {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-checkbox-input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	position: absolute;
+}
+
+.modal-checkbox-icon {
+	display: inline-block;
+
+	width: 16px;
+	height: 15px;
+
+	margin-right: 8px;
+
+	fill: var(--primary-title-color);
+
+	transition: fill 250ms var(--main-timing);
+}
+
+.modal-checkbox-input:checked + .modal-checkbox-icon {
+	fill-opacity: 0;
+	background-color: var(--accent-color);
+	border-radius: 2px;
+	background-image: url(../icon/check-on.svg);
+}
+
+.modal-checkbox-label:hover .modal-checkbox-icon, 
+.modal-checkbox-label:focus .modal-checkbox-icon {
+	fill: var(--accent-color);
+}
+
+.modal-checkbox-link {
+	color: var(--accent-color);
 }
 
 
+/* Modal Button */
 
+.modal-form-btn {
+	width: 200px;
+	height: 50px;
+
+	background: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 1.87;
+	display: inline-block;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.06em;
+	color: var(--secondary-text-color);
+
+	padding: 10px 55px;
+}
